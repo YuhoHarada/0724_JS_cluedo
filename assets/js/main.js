@@ -106,8 +106,10 @@ function revealMystery() {
     let mystery1 = pickMystery()
     result.innerHTML = `<h2><span style="color:${mystery1.suspect.color}">${mystery1.suspect.firstName} ${mystery1.suspect.lastName}</span> killed Mr. Boddy using the ${mystery1.weapon.name} in the ${mystery1.room.name}!</h2>`
     result.innerHTML += `
-    <div id="top"></div>
-    <div>
+    <article>
+    <main>
+    <div class="top"></div>
+    <div id="main">
         <img src="${mystery1.suspect.image}">
         <h3>${mystery1.suspect.cardName}</h3>
         <h5>${mystery1.suspect.firstName} ${mystery1.suspect.lastName} (${mystery1.suspect.age})</h5>
@@ -116,5 +118,15 @@ function revealMystery() {
             ${mystery1.suspect.description}
         </p>
     </div>
-    <div id="bottom"></div>`
+    <div class="bottom"></div>
+    </main>
+    <aside>
+    <div class="top"></div>
+    <div id="weapon">${mystery1.weapon.name}</div>
+    <div class="bottom"></div>
+    <div class="top"></div>
+    <div id="room">${mystery1.room.name}</div>
+    <div class="bottom"></div>
+    </aside>
+    </article>`
 }

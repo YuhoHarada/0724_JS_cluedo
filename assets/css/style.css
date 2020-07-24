@@ -4,22 +4,29 @@ body{
     background: #ddd;
 }
 
+article{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 div{
     width: 200px;
-    background: url(../img/middle.png) top 100px left 0px/contain repeat-y;
+    background: url(../img/middle.png) top/100% repeat-y;
     padding: 0px 25px;
-    margin: 0 auto;
+    margin: 0 10px;
     color: #4d2d10;
 }
 
-#top{
+.top{
     background: url(../img/top.png) top/100% no-repeat;
     padding: 20px 25px;
 }
 
-#bottom{
+.bottom{
     background: url(../img/bottom.png) bottom/100% no-repeat;
     padding: 19px 25px;
+    margin-bottom: 20px;
 }
 
 div *{
@@ -55,4 +62,9 @@ p{
     background: #e7c8aa99;
     padding: 5px;
     border-radius: 5px;
+}
+
+#weapon,#room{
+    color: #e7c8aa;
+    font-family: fantasy;
 }
